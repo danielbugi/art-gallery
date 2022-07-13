@@ -1,0 +1,57 @@
+<%- include('templates/head') %> 
+<body dir="rtl">
+    <%- include('templates/nav-bar') %>
+
+    <main class="gallery-main">
+        <div class="gallery-container">
+            <div id="gallery">  
+            </div>
+        </div>
+        <div id="popup">
+            <img src="" alt="" id="selectedImage">
+        </div>
+    
+    </main>
+
+    <%- include('templates/footer') %>
+
+
+
+    <!-- <script src="gallery-script.js"></script> -->
+    <script>
+
+        const gallery = document.querySelector('#gallery');
+        const popup = document.getElementById('popup');
+        const selectedImage = document.getElementById('selectedImage');
+        const N = 40
+        const imageIndexes = [...Array(N)].map((_, index) => index + 1);
+        // [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+        const selectedIndex = null;
+
+        imageIndexes.forEach(i => {
+            const image = document.createElement('img');
+            image.src = `/images/img/image-${i}.jpeg`;
+            image.alt = `image-gallery-${i}`;
+            image.classList.add('galleryImg');
+
+            image.addEventListener('click', () => {
+                //popup stuff
+                popup.style.transform = `translateY(0)`;
+                selectedImage.src = `/images/img/image-${i}.jpeg`;
+                selectedImage.alt = `image-gallery-${i}`;
+            })
+
+            gallery.appendChild(image);
+        })
+        popup.addEventListener('click', () => {
+            popup.style.transform = `translateY(-150%)`;
+            popup.src = "";
+            popup.alt = "";
+            
+            
+            
+        })
+    </script>
+
+</body>
+</html>

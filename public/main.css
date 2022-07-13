@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Bellota+Text:wght@300;400;700&family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Lexend+Deca&family=Monoton&family=Montserrat:wght@500&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Orbitron:wght@500&family=Oswald:wght@200;300;400;500;600;700&family=Outfit:wght@400;700&family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Roboto:ital,wght@1,100&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background-color: #f6f6f6;
+    font-family: 'Baloo Da 2', sans-serif;
+    /* overflow: hidden; */
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    /* overflow: hidden; */
+}
+
+.nav-links {
+    width: auto;
+    padding-top: 2.5rem;
+    display: flex;
+    /* justify-content: space-around; */
+    
+
+}
+.logo-img {
+    padding-left: 4rem;
+}
+.link {
+    font-size: 16px;
+    margin: 0 2rem 0 2rem;
+    text-decoration: none;
+    color: #7F8487;
+    transition: .3s;
+}
+
+.link:hover {
+    color: #191919;
+}
+
+
+/* CHECKBOX HACK */
+input[type="checkbox"]{
+    display: none;
+}
+/*HAMBURGER MANU*/
+.hamburger {
+    font-size: 24px;
+    user-select: none;
+    display: none;
+}
+/* Navbar End */
+
+
+.about {
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index {
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact {
+    width: 60%;
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+
+
+/* about */
+.about-wrapper {
+    margin-bottom: 8rem;
+}
+.line-up {
+    margin: 1.5rem 0 2.5rem 0;
+    height: 2px;
+    width: 90%;
+    background-color: #7F8487;
+}
+.line-down {
+    margin: 2.5rem 0;
+    height: 2px;
+    width: 90%;
+    background-color: #7F8487;
+}
+.about-p {
+    color: #161616;
+    width: 90%;
+}
+h1 { 
+    color: #161616;
+}
+.sub-header {
+    color: #161616;
+}
+/* end of about */
+/* contact */
+.contact {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.contact-wrapper {
+    height: 40vh;
+    width: 100%;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    
+}
+.form {
+    width: 50rem;
+    display: flex;
+    flex-direction: column; 
+}
+.contact-header {
+   margin-top: 8rem;
+}
+
+form input,
+form textarea {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Baloo Da 2', sans-serif;
+    font-size: 0.8rem;
+    border: solid 1.5px #adadad;
+    outline: none;
+}
+form textarea {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 8rem;
+    min-height: 8rem;
+    resize: none;
+}
+form input[type="submit"] {
+    width: 5rem;
+    background-color: #adadad;
+    cursor: pointer;
+    color: #f6f6f6;
+}
+/* End of contacr */
+
+/* gallery */
+.gallery-main {
+    max-width: 80rem;
+    height: 80vh;
+    margin-top: 8rem;
+    padding-bottom: 20rem;
+}
+/* #gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 20px;
+} */
+#gallery {
+    column-count: 4;
+    display: block;
+    padding: 1.5rem 3rem 1.5rem 0;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10rem;
+
+}
+
+.galleryImg {
+    max-width: 250px;
+    margin: auto;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 200ms;
+    cursor: pointer;
+}
+.galleryImg:hover {
+   transform: translateY(-2px);
+   box-shadow: 1px 1px 10px black;
+}
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-150%);
+    transition: 250ms transform;
+    padding: 50px;
+}
+#selectedImage {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* end of gallery */
+
+ .footer {
+    width: 100%;
+    height: 8rem; 
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    position: fixed;
+    z-index: 50;
+ }
+ .footer-nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .icons {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+ }
+
+.fa-facebook {
+    font-size: 2.5rem;
+    padding-left: 1.5rem;
+}
+.fa-instagram {
+    font-size: 2.5rem;
+    padding-left: 1.5rem;
+}
+.fa-pinterest {
+    font-size: 2.5rem;
+}
+.fa-pinterest:hover {
+   color: #E60023
+}
+
+.fa-facebook:hover {
+    color: #4267B2;
+}
+.fa-instagram:hover {
+    color: #C13584;
+}
+
+/* End of Navbar */
+
+@media(max-width: 950px) {
+    html {
+        font-size: 85%;
+    }
+
+    .index {
+        width: 80%;
+        height: 80vh;
+    }   
+    #gallery {
+        width: 50rem;
+        column-count: 2;
+        margin-top: 5rem;
+    }
+    .galleryImg {
+        max-width: 80%;
+    }
+
+}
+@media(max-width: 880px) {
+    html {
+        font-size: 80%;
+    }
+    #gallery {
+        width: 50rem;
+        column-count: 1;
+        margin-top: 5rem;
+        padding-right: 5rem;
+        padding-top: 2rem;
+
+    }
+    .galleryImg {
+        max-width: 80%;
+    }
+    .contact-wrapper {
+       flex-direction: column;
+    }
+    .form {
+    width: 80%;
+      align-items: center;
+      margin-bottom: 5.5rem;
+    }
+    form input,
+    form textarea {
+   width: 100%;
+    }
+}
+@media(max-width: 890px) {
+  .navbar {
+    width: 100%;
+    height: 8rem;
+  }
+  .nav-links { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 8rem;
+    left: -100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: all .5s;
+  }
+
+ 
+  .link {
+    background: none;
+    padding: 40px;
+    font-size: 18px;
+  }
+  .link:hover {
+    color: aliceblue;
+  }
+  input[type="checkbox"]:checked ~.nav-links{
+    display: flex;
+    left: 0%;
+    
+}
+  .hamburger {
+    display: block;
+  }
+  /* input[type="checkbox"] {
+    display: block;
+  } */
+}
